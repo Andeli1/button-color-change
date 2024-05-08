@@ -1,5 +1,6 @@
+//Initial background color //
 let originalColor = '#fofofo';
-// Previous background color
+// Previous background color// 
 let prevColor = originalColor;
 // Function to change background color
 function changeBackgroundColor(color) {
@@ -14,5 +15,11 @@ document.querySelectorAll('button').forEach(item => {
     });
   });
   
-
+// Event listener for button clicks
+document.querySelectorAll('button').forEach(item => {
+    item.addEventListener('click', event => {
+      changeBackgroundColor(event.target.style.backgroundColor);
+    });
+  });
+  
 
